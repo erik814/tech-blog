@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Comment, Post, User } = require('../../models');
 const bcrypt = require('bcrypt');
 
+// sign up
 router.post('/signup', async (req, res) => {
     try {
         const newUser = await User.create({
@@ -16,6 +17,7 @@ router.post('/signup', async (req, res) => {
     }
 });
 
+// login
 router.post('/login', async (req, res) => {
     try {
         const dbUser = await User.findOne({
@@ -47,6 +49,7 @@ router.post('/login', async (req, res) => {
     }
 });
 
+// logout
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
         req.session.destroy(() => {

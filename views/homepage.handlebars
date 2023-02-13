@@ -1,0 +1,14 @@
+
+<ul>
+    {{#each posts}}
+        <li>
+            <div>
+                <h3>{{ title }}</h3>
+                <p>Post by {{ User }} on {{createdAt.toLocaleString()}}</p>
+            </div>
+            <p>{{ content }}</p>
+        </li>
+    {{/each}}
+</ul>
+
+<script src="../public/js/homepage.js"></script>
