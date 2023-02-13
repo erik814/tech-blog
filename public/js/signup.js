@@ -1,3 +1,4 @@
+// login
 const loginFormHandler = async (event) => {
     event.preventDefault();
     const username = document.querySelector('#username-login').value.trim();
@@ -18,7 +19,7 @@ const loginFormHandler = async (event) => {
     }
 };
 
-  // -------------------------sign up works fine
+// sign up
 const signupFormHandler = async (event) => {
     event.preventDefault();
     console.log('clicked')
