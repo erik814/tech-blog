@@ -83,5 +83,26 @@ router.post('/', async (req, res) => {
     }
 })
 
+// create comment
+
+router.post('/comments', async (req, res) => {
+    // res.json({message: req.body})
+
+    const {content, user_id, post_id} = req.body;
+    
+    try {
+        const newComment = await Comment.create({
+            content: req.body.content,
+            user_id: req.body.user_id,
+            post_id: req.body.post_id
+        });
+
+        res.json(newComment);
+    } catch (error) {
+        console.log(error);
+        res.status(400).json(error);
+    }
+})
+
 
 module.exports = router;
