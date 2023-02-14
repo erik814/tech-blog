@@ -1,15 +1,16 @@
 
 <ul>
     {{#each posts}}
-        <li>
-            <div>
+        <li class="post-container">
+            <div class="post-header">
                 <h3>{{ title }}</h3>
+                <p>Posted by {{ user.username }} on {{ createdAt }}</p>
             </div>
-            <p>{{ content }}</p>
+            <p class="post-content">{{ content }}</p>
         </li>
     {{/each}}
 </ul>
 
-<script src="../public/js/homepage.js"></script>
+{{!-- <script src="../public/js/homepage.js"></script> --}}
 
 {{!-- {{createdAt.toLocaleString()}} --}}

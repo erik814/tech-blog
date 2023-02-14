@@ -7,10 +7,13 @@ body {
     background-color: var(--light);
 }
 
+/* main handlebars */
+
 .header{
     background-color: var(--wine);
     display: flex;
     flex-direction: column;
+
 }
 
 .nav-item{
@@ -27,4 +30,53 @@ header h1{
     padding: 0.25rem;
     border-radius: 8px;
     box-shadow: 5px 4px #b7c0a9;
+}
+
+/* homepage style */
+
+ul {
+    list-style-type: none;
+}
+
+.post-container{
+    border: 2px solid var(--wine);
+    margin: 2rem;
+}
+
+.post-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--wine);
+    color: var(--light);
+    padding: 0 0.5rem;
+}
+
+.post-header h3{
+    margin: 0;
+}
+
+.post-header p {
+    margin: 0;
+}
+
+.post-content{
+    margin: 0.75rem;
+}
+
+/* login */
+
+.login-div{
+    border: 2px solid var(--wine);
+    margin: 2rem;
+}
+
+.login-div h2{
+    background-color: var(--wine);
+    color: var(--light);
+    margin: 0;
+    padding: 0.25rem;
+}
+
+.login-div form{
+    padding: 0.5rem;
 }
